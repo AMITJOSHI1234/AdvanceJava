@@ -1,0 +1,12 @@
+package in.co.rays.jdbcTask;
+
+public class Delete1 {
+public static void main(String[] args) {
+	int count = delete();
+	if(count==0) {
+		System.out.println("Deletion not successfull");
+	}else {
+		System.out.println("Record delete successfully");
+	}
+}
+}

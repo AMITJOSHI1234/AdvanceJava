@@ -1,0 +1,7 @@
+package in.co.rays.jdbc1;
+
+public class Poolmain {
+public static void main(String[] args) {
+	Poo1 ps = new Pool1();
+}
+}

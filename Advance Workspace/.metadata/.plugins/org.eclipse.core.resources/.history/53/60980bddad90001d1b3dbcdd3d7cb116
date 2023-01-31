@@ -1,0 +1,25 @@
+package in.co.rays.jdbc1;
+
+import java.beans.PropertyVetoException;
+import java.sql.Connection;
+import java.sql.SQLException;
+
+import com.mchange.v2.c3p0.ComboPooledDataSource;
+
+public class Pool1 {
+
+	public void pool() throws PropertyVetoException, SQLException {
+		
+		ComboPooledDataSource cs = new ComboPooledDataSource();
+		
+		cs.setDriverClass("com.mysql.cj.jdbc.Driver");
+		cs.setJdbcUrl("jdbc:mysql//localhost:3306/advancejava");
+		cs.setUser("root");
+		cs.setPassword("root@123");
+		cs.setInitialPoolSize(5);
+		cs.setAcquireIncrement(5);
+		cs.setMaxPoolSize(50);
+		
+		Connection conn = cs.getConnection();
+}
+}

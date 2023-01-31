@@ -1,0 +1,7 @@
+package in.co.rays.jdbcTask;
+
+public class Callable2 {
+public static void main(String[] args) {
+	//Procedure with one parameter
+}
+}

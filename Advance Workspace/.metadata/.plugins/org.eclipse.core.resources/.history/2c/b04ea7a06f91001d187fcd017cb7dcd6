@@ -1,0 +1,12 @@
+package in.co.rays.jdbc1;
+
+import java.util.Locale;
+import java.util.ResourceBundle;
+
+public class Resourcelocale {
+public static void main(String[] args) {
+	Locale l = new Locale("Hi","In");
+	ResourceBundle rs = ResourceBundle.getBundle("in.co.rays.bundel.app_local",l);
+	System.out.println(rs.getString("greeting"));
+}
+}

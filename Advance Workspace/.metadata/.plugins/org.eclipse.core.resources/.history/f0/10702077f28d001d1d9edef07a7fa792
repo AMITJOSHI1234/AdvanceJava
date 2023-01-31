@@ -1,0 +1,32 @@
+package in.co.rays.jdbcTask;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+
+public class transation1 {
+public static void main(String[] args) throws ClassNotFoundException, SQLException {
+	Class.forName("com.mysql.cj.jdbc.Driver");
+	
+	Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/advancejava","root","root@123");
+  try {
+		con.setAutoCommit(false);
+		
+		String s1 = "insert into empdetails (id,fname,country,email) values(9,'Mark Ruffelo','USA','mark@gmail.com')";
+		String s2 = "insert into empdetails (id,fname,country,email) values(10,'Allu Arjun','India','allu@gmail.com')";
+
+		Statement st = con.createStatement();
+		int i = st.executeUpdate(s1);
+		i = st.executeUpdate(s2);
+		
+		System.out.println(i + " " + "Insert successfully");
+		
+		con.commit();
+  }catch(Exception e) {
+	  con.rollback();
+	  System.out.println("Database failure");
+  }
+}
+}

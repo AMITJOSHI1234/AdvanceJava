@@ -1,0 +1,15 @@
+package in.co.rays.MarksheetModel;
+
+import java.util.ResourceBundle;
+
+import in.co.rays.MarksheetBean.MarksheetBean;
+
+public class MarksheetModel {
+public int add(MarksheetBean bean) throws ClassNotFoundException {
+	ResourceBundle rs = ResourceBundle.getBundle("in.co.rays.bundel.app");
+	Class.forName(rs.getString("Driver"));
+	String user = rs.getString("user");
+	
+	
+}
+}

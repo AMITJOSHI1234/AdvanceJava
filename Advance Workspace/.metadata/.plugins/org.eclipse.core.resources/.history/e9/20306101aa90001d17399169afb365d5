@@ -1,0 +1,13 @@
+package in.co.rays.jdbc1;
+
+import com.mchange.v2.c3p0.ComboPooledDataSource;
+
+public class Pool1 {
+
+	public static void main(String[] args) {
+		
+		ComboPooledDataSource cs = new ComboPooledDataSource();
+		
+		
+	}
+}
